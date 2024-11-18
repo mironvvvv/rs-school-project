@@ -47,10 +47,7 @@ a {
 .main {
     border-radius: 20px;
     background-color: var(--primary);
-    background-image: url(assets/img/bg-garland.png);
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 200px;
+    
 }
 
 .action-small {
@@ -149,10 +146,15 @@ text-transform: uppercase;
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 82px;
+    gap:12px;
+    padding: 12px 0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow:1;
+}
 .nav-list {
     display: inline-flex;
     list-style: none;
@@ -167,7 +169,7 @@ text-transform: uppercase;
 .nav-link {
     transition: 0.3s ease;
     display:block;
-    padding: 12px;
+    padding: 12px 20px;
     color: var(--Dark, #181C29);
 }
 
@@ -179,12 +181,25 @@ background: var(--Primary-10, rgba(255, 70, 70, 0.10));
 }
 .disabled {
     pointer-events: none;
+    color: var(--primary, #FF4646);
+    border-radius: 12px;
+background: var(--Primary-10, rgba(255, 70, 70, 0.10));
 }
+
+.gifts {
+    background-image: url(assets/img/bg-garland.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 1440px auto;
+
+}
+
 .gifts-content {
     display: flex;
 flex-direction: column;
 align-items: center;
 gap:20px;
+
 }
 .title {
     color: var(--Static-White, #FFF);
@@ -277,6 +292,7 @@ cursor:pointer;
 }
 .header-3-best {
     overflow: hidden;
+    margin-bottom: 24.32px;
 color: var(--Dark, #181C29);
 text-overflow: ellipsis;
 
