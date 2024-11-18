@@ -42,12 +42,14 @@ a {
 .container {
     width: 100%;
     padding: 60px 0;
+    
 }
 
 .main {
     border-radius: 20px 20px 0px 0px;
     background-color: var(--primary);
     background-image: url(assets/img/bg-snow.png);
+    background-size: 1440px auto;
 }
 
 .action-small {
@@ -77,6 +79,7 @@ font-style: normal;
 font-weight: 400;
 line-height: 100%;
 letter-spacing: 1.2px;
+color: var(--Static-White, #FFF);
 }
 
 h2 {
@@ -146,10 +149,15 @@ text-transform: uppercase;
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px 82px;
+    gap:12px;
+    padding: 12px 0;
 }
 
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow:1;
+}
 .nav-list {
     display: inline-flex;
     list-style: none;
@@ -164,7 +172,7 @@ text-transform: uppercase;
 .nav-link {
     transition: 0.3s ease;
     display:block;
-    padding: 12px;
+    padding: 12px 20px;
     color: var(--Dark, #181C29);
 }
 
@@ -175,8 +183,10 @@ text-transform: uppercase;
 background: var(--Primary-10, rgba(255, 70, 70, 0.10));
 }
 
+
 .hero {
-    background: url(assets/img/bg-ball.png) no-repeat center / cover;
+    background: url(assets/img/bg-ball.png) no-repeat center;
+    background-size: 1440px auto;
 
 
 }
@@ -196,7 +206,7 @@ font-size: 32px;
 font-style: normal;
 font-weight: 600;
 line-height: 150%; 
-letter-spacing: 5.76px;
+letter-spacing: 5.6px;
 text-transform: uppercase;
 color: var(--Static-White, #FFF);
 text-align: center;
@@ -274,6 +284,7 @@ border-radius: 20px;
     display:flex;
     flex-direction: column;
     gap:20px;
+    width:100%;
 }
 
 .sliders {
@@ -397,8 +408,10 @@ text-overflow: ellipsis;
 }
 
 .CTA {
-    background: url(assets/img/bg-forest.png) no-repeat center / cover;
+    background: url(assets/img/bg-forest.png) no-repeat center;
+    background-size: 1440px auto;
     border-radius: 0px 0px 20px 20px;
+    
 
 }
 
@@ -408,7 +421,7 @@ text-overflow: ellipsis;
 justify-content: center;
 align-items: center;
 max-width: 426px;
-padding:60px 0;
+padding:120px 0;
 gap:20px;
 }
 
