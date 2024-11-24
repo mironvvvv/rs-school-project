@@ -29,6 +29,11 @@ html {
     transition: 0.3s ease;
 }
 
+body {
+    max-width:1440px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -47,6 +52,7 @@ a {
 .main {
     border-radius: 20px;
     background-color: var(--primary);
+    
     
 }
 
@@ -187,10 +193,10 @@ background: var(--Primary-10, rgba(255, 70, 70, 0.10));
 }
 
 .gifts {
-    background-image: url(assets/img/bg-garland.png);
+    background-image: url(../assets/img/bg-garland.png);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 1440px auto;
+    background-size: contain;
 
 }
 
@@ -373,15 +379,22 @@ align-items: flex-start;
 gap:12px;
 }
 
-.socials-img {
+.socials svg{
     margin:8px;
-    width: 24px;
-height: 24px;
-
 }
+
+.socials svg:hover path {
+stroke:#FF4646;
+}
+
 a.caption {
     color: var(--Dark, #181C29);
 }
+
+a.caption:hover {
+    color: #FF4646;
+}
+
 /*
 .modal {
     display: none;
