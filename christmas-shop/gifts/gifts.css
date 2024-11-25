@@ -295,13 +295,18 @@ cursor:pointer;
     padding:20px;
     text-align: start;
     width:100%;
+    background-color: #fff;
+    border-radius: 20px;
 }
 .header-3-best {
     overflow: hidden;
-    margin-bottom: 24.32px;
+    padding-bottom: 24.32px;
 color: var(--Dark, #181C29);
 text-overflow: ellipsis;
 
+}
+.bestt {
+    padding-bottom: 0;
 }
 
 
@@ -394,7 +399,7 @@ a.caption {
 a.caption:hover {
     color: #FF4646;
 }
-@media (max-width:1440px) {
+@media (max-width:1439px) {
     .container {
         padding: 60px 8px;
     }
@@ -424,6 +429,8 @@ a.caption:hover {
         width: 50%;
         border-radius: 1px;
     }
+}
+@media (max-width:767px) {
     .tabs-action {
         padding: 12px 8px;
     }
