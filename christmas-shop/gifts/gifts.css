@@ -29,6 +29,11 @@ html {
     transition: 0.3s ease;
 }
 
+body {
+    max-width:1440px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -47,6 +52,7 @@ a {
 .main {
     border-radius: 20px;
     background-color: var(--primary);
+    
     
 }
 
@@ -187,10 +193,10 @@ background: var(--Primary-10, rgba(255, 70, 70, 0.10));
 }
 
 .gifts {
-    background-image: url(assets/img/bg-garland.png);
+    background-image: url(../assets/img/bg-garland.png);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 1440px auto;
+    background-size: contain;
 
 }
 
@@ -289,13 +295,18 @@ cursor:pointer;
     padding:20px;
     text-align: start;
     width:100%;
+    background-color: #fff;
+    border-radius: 20px;
 }
 .header-3-best {
     overflow: hidden;
-    margin-bottom: 24.32px;
+    padding-bottom: 24.32px;
 color: var(--Dark, #181C29);
 text-overflow: ellipsis;
 
+}
+.bestt {
+    padding-bottom: 0;
 }
 
 
@@ -373,14 +384,59 @@ align-items: flex-start;
 gap:12px;
 }
 
-.socials-img {
+.socials svg{
     margin:8px;
-    width: 24px;
-height: 24px;
-
 }
+
+.socials svg:hover path {
+stroke:#FF4646;
+}
+
 a.caption {
     color: var(--Dark, #181C29);
+}
+
+a.caption:hover {
+    color: #FF4646;
+}
+@media (max-width:1439px) {
+    .container {
+        padding: 60px 8px;
+    }
+    .christmas-contacts {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width:768px) {
+    .nav-list {
+        display:none;
+    
+    }
+    .header {
+        padding: 12px 8px;
+    }
+    .burger-menu {
+        display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    }
+    .burger-menu span {
+        border: 1px solid #181C29;
+        width: 50%;
+        border-radius: 1px;
+    }
+}
+@media (max-width:767px) {
+    .tabs-action {
+        padding: 12px 8px;
+    }
+    .tabs {
+        gap: 0px;
+    }
 }
 /*
 .modal {
