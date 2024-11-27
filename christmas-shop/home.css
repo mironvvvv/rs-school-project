@@ -145,9 +145,7 @@ text-transform: uppercase;
     transition: 0.3s ease;
 }
 
-.logo:hover {
-    transform: scale(1.05);
-}
+
 
 .logo .action-small {
     color: var(--Dark, #181C29);
@@ -183,11 +181,7 @@ text-transform: uppercase;
 }
 
 
-.nav-link:hover {
-    color: var(--primary, #FF4646);
-    border-radius: 12px;
-background: var(--Primary-10, rgba(255, 70, 70, 0.10));
-}
+
 
 
 .hero {
@@ -227,10 +221,7 @@ text-align: center;
 transition: 0.3s ease;
 }
 
-.button:hover {
-    background: var(--Static-White, #FFF);
-    color: var(--Dark, #181C29);
-}
+
 
 
 .about-content {
@@ -264,7 +255,6 @@ border-radius: 20px;
 }
 
 .about-santa {
-    max-width: 638px;
     border-radius: 20px;
     background-image: url(assets/img/santa.png);
     background-size: cover;
@@ -341,14 +331,7 @@ align-items: center;
     border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.40));
     cursor: default;
 }
-.strelka:hover {
-    background: var(--Static-White, #FFF);
-}
 
-.strelka:not(:disabled):hover .right path,
-.strelka:not(:disabled):hover .left path {
-    stroke:#FF4646;
-}
 
 .best-content {
     display: flex;
@@ -382,9 +365,7 @@ align-items: center;
 cursor:pointer;
 max-width: 310px;
 }
-.card:hover .header-3-best {
-    color:#FF4646;
-}
+
 .card-img {
     width:310px;
     height:230px;
@@ -505,13 +486,7 @@ width:100%;
 .christmas-contacts .link {
     width: 100%;
 }
-.link:hover .contacts-text {
-    color: var(--Primary, #FF4646);
-}
 
-.link:hover .header-3-footer{
-    color: var(--Primary, #FF4646);
-}
 .contact-card {
     display: flex;
 padding: 20px;
@@ -560,17 +535,13 @@ gap:12px;
     margin:8px;
 }
 
-.socials svg:hover path {
-stroke:#FF4646;
-}
+
 
 a.caption {
     color: var(--Dark, #181C29);
 }
 
-a.caption:hover {
-    color: #FF4646;
-}
+
 
 
 @media (max-width:1439px) {
@@ -581,11 +552,15 @@ a.caption:hover {
         flex-wrap: wrap;
         justify-content: center;
     }
-    .christmas-contacts {
-        flex-wrap: wrap;
-    }
+    
     .about-content-text {
         width: 84%;
+    }
+}
+
+@media (max-width:1060px) {
+    .christmas-contacts {
+        flex-wrap: wrap;
     }
 }
 
@@ -621,6 +596,45 @@ gap: 8px;
     padding: 60px 20px;
     width:100%;
 }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logo:hover {
+        transform: scale(1.05);
+    }
+    .nav-link:hover {
+        color: var(--primary, #FF4646);
+        border-radius: 12px;
+    background: var(--Primary-10, rgba(255, 70, 70, 0.10));
+    }
+    .button:hover {
+        background: var(--Static-White, #FFF);
+        color: var(--Dark, #181C29);
+    }
+    .strelka:hover {
+        background: var(--Static-White, #FFF);
+    }
+    
+    .strelka:not(:disabled):hover .right path,
+    .strelka:not(:disabled):hover .left path {
+        stroke:#FF4646;
+    }
+    .card:hover .header-3-best {
+        color:#FF4646;
+    }
+    .link:hover .contacts-text {
+        color: var(--Primary, #FF4646);
+    }
+    
+    .link:hover .header-3-footer{
+        color: var(--Primary, #FF4646);
+    }
+    .socials svg:hover path {
+        stroke:#FF4646;
+    }
+    a.caption:hover {
+            color: #FF4646;
+    }
 }
 /*
 .modal {
