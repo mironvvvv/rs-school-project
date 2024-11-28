@@ -145,9 +145,7 @@ text-transform: uppercase;
     transition: 0.3s ease;
 }
 
-.logo:hover {
-    transform: scale(1.05);
-}
+
 
 .logo .action-small {
     color: var(--Dark, #181C29);
@@ -183,16 +181,12 @@ text-transform: uppercase;
 }
 
 
-.nav-link:hover {
-    color: var(--primary, #FF4646);
-    border-radius: 12px;
-background: var(--Primary-10, rgba(255, 70, 70, 0.10));
-}
+
 
 
 .hero {
     background: url(assets/img/bg-ball.png) no-repeat center;
-    background-size: 1440px auto;
+    background-size: cover;
 
 
 }
@@ -227,10 +221,7 @@ text-align: center;
 transition: 0.3s ease;
 }
 
-.button:hover {
-    background: var(--Static-White, #FFF);
-    color: var(--Dark, #181C29);
-}
+
 
 
 .about-content {
@@ -264,8 +255,14 @@ border-radius: 20px;
 }
 
 .about-santa {
-    max-width: 638px;
     border-radius: 20px;
+    background-image: url(assets/img/santa.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-height: 528px;
+    height: 100vh;
 
 }
 
@@ -334,14 +331,7 @@ align-items: center;
     border: 1px solid var(--Static-White-40, rgba(255, 255, 255, 0.40));
     cursor: default;
 }
-.strelka:hover {
-    background: var(--Static-White, #FFF);
-}
 
-.strelka:not(:disabled):hover .right path,
-.strelka:not(:disabled):hover .left path {
-    stroke:#FF4646;
-}
 
 .best-content {
     display: flex;
@@ -373,10 +363,9 @@ background: var(--Content-Background, #ECF3F8);
 flex-direction: column;
 align-items: center;
 cursor:pointer;
+max-width: 310px;
 }
-.card:hover .header-3-best {
-    color:#FF4646;
-}
+
 .card-img {
     width:310px;
     height:230px;
@@ -405,12 +394,18 @@ cursor:pointer;
     padding:20px;
     text-align: start;
     width:100%;
+    background-color: #fff;
+    border-radius: 20px;
 }
 .header-3-best {
     overflow: hidden;
 color: var(--Dark, #181C29);
 text-overflow: ellipsis;
+padding-bottom: 24.32px;
 
+}
+.bestt {
+    padding-bottom: 0;
 }
 
 .CTA {
@@ -491,13 +486,7 @@ width:100%;
 .christmas-contacts .link {
     width: 100%;
 }
-.link:hover .contacts-text {
-    color: var(--Primary, #FF4646);
-}
 
-.link:hover .header-3-footer{
-    color: var(--Primary, #FF4646);
-}
 .contact-card {
     display: flex;
 padding: 20px;
@@ -546,18 +535,107 @@ gap:12px;
     margin:8px;
 }
 
-.socials svg:hover path {
-stroke:#FF4646;
-}
+
 
 a.caption {
     color: var(--Dark, #181C29);
 }
 
-a.caption:hover {
-    color: #FF4646;
+
+
+
+@media (max-width:1439px) {
+    .container {
+        padding: 60px 8px;
+    }
+    .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .about-content-text {
+        width: 84%;
+    }
 }
 
+@media (max-width:1060px) {
+    .christmas-contacts {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:768px) {
+.nav-list {
+    display:none;
+
+}
+.header {
+    padding: 12px 8px;
+}
+.burger-menu {
+    display: flex;
+width: 40px;
+height: 40px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+}
+.burger-menu span {
+    border: 1px solid #181C29;
+    width: 50%;
+    border-radius: 1px;
+}
+}
+@media (max-width:767px) {
+.about-content {
+    flex-direction: column;
+    align-items: center;
+}
+.about-content-text {
+    padding: 60px 20px;
+    width:100%;
+}
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .logo:hover {
+        transform: scale(1.05);
+    }
+    .nav-link:hover {
+        color: var(--primary, #FF4646);
+        border-radius: 12px;
+    background: var(--Primary-10, rgba(255, 70, 70, 0.10));
+    }
+    .button:hover {
+        background: var(--Static-White, #FFF);
+        color: var(--Dark, #181C29);
+    }
+    .strelka:hover {
+        background: var(--Static-White, #FFF);
+    }
+    
+    .strelka:not(:disabled):hover .right path,
+    .strelka:not(:disabled):hover .left path {
+        stroke:#FF4646;
+    }
+    .card:hover .header-3-best {
+        color:#FF4646;
+    }
+    .link:hover .contacts-text {
+        color: var(--Primary, #FF4646);
+    }
+    
+    .link:hover .header-3-footer{
+        color: var(--Primary, #FF4646);
+    }
+    .socials svg:hover path {
+        stroke:#FF4646;
+    }
+    a.caption:hover {
+            color: #FF4646;
+    }
+}
 /*
 .modal {
     display: none;
