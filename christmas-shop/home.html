@@ -16,17 +16,20 @@
 </head>
 
 <body>
-    <div class="overlay" id="overlay"></div>
-    <header class="header content">
+    <div class="overlay active" id="overlay"></div>
+    <header class="header content header-active">
+        <div class="logo-burger">
         <a href=" " class="logo">
             <img class="logo-img" src="assets/svg/snowflake.svg" alt="logo">
             <p class="action-small">the gifts</p>
         </a>
-        <nav class="navbar">
-            <div class="burger-menu">
+        
+            <div class="burger-menu active">
                 <span></span>
                 <span></span>
             </div>
+        </div>
+            <nav class="navbar active">
             <ul class="nav-list">
                 <li class="nav-item"><a href="gifts/gifts.html" class="nav-link action-small">gifts</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link action-small">about</a></li>
@@ -71,7 +74,7 @@
                 <div class="slider-section">
 
                     <div class="sliders" id="carousel">
-                        <div class="card-carousel">
+                    <div class="card-carousel">
                             <p class="slider-text">live</p>
                             <img class="slider-img" src="assets/img/snowman.png" alt="Snowman">
                         </div>
@@ -83,23 +86,27 @@
                             <p class="slider-text">Love</p>
                             <img class="slider-img" src="assets/img/christmas-tree-ball.png" alt="christmas tree ball">
                         </div>
+                        <div class="card-carousel">
+                            <p class="slider-text">Dream</p>
+                            <img class="slider-img" src="assets/img/fairytale-house.png" alt="fairytale house">
+                        </div>
                     </div>
 
                     <div class="buttons-navigations">
-                        <div class="slider-left strelka">
+                        <button class="slider-left strelka" aria-label="Previous slide">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" class="left">
-                                <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="white" stroke-opacity="0.4"
+                                fill="none" class="left" transform="rotate(180)">
+                                <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </div>
-                        <div class="slider-right strelka">
+                        </button>
+                        <button class="slider-right strelka" aria-label="Next slide">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" class="right">
                                 <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="white"
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
