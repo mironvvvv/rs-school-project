@@ -617,8 +617,7 @@ a.caption {
         color: #FF4646;
     }
 }
-
-/*
+*
 .modal {
     display: none;
     position: fixed;
@@ -662,89 +661,68 @@ border: 2px solid var(--color-primary, #F1CDB3);
     background-color:var(--color-primary-light, #FDDCC4);
   }
 
-  .modal-body {
+  
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    overflow: hidden;
     display: flex;
-    gap: 30px;
-    
-  }
-  
-  .modal-image img {
-    width: 500px;
-    height: 500px;
-    border-radius: 9px 0px 0px 9px;
-  }
-  
-  .modal-info {
-    flex-grow: 1;
-    padding: 50px 20px 88px 0;
-    width:100%;
-  }
-  
-  #modal-title {
-    color: #000;
-font-family: Georgia;
-font-size: 35px;
-font-style: normal;
-font-weight: 400;
-line-height: 130%; 
-letter-spacing: 2.1px;
-padding-bottom: 10px;
-  }
-  
-  #modal-subtitle {
-    color: #000;
-    font-family: Georgia;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 115%; 
-    letter-spacing: 1.2px;
-    padding-bottom: 40px;
-  }
+    flex-direction: column;
+    position: relative;
+}
 
-  #modal-description {
-    color: #000;
-font-family: Georgia;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 110%; 
-letter-spacing: 0.9px;
-width: 350px;
 
-  }
-  
-  .modal-details {
-    padding-top: 40px;
-    padding-left: 12px;
-    list-style-image: url('assets/svg/dot.svg');
-    display: inline-flex;
-height: 102px;
+.modal-image-container {
+    height: 230px;
+    width: 100%;
+    overflow: hidden;
+}
 
-flex-direction: column;
+.modal-image-container img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
-align-items: flex-start;
-gap: 10px;
-flex-shrink: 0;
-  }
-  
-  .modal-details span{
-    color: #000;
-font-family: Georgia;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-line-height: 110%;
-letter-spacing: 0.9px;
-  }
-  
-  .modal-details strong {
-    color: #000;
-font-family: Georgia;
-font-size: 15px;
-font-style: normal;
-font-weight: 700;
-line-height: 110%; 
-letter-spacing: 0.9px;
-  }
-*/
+
+.modal-description {
+    padding: 20px;
+}
+
+.modal-description h2,
+.modal-description h4 {
+    margin: 0;
+}
+
+.modal-description ul {
+    list-style: disc inside;
+    padding-left: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+}
