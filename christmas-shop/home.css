@@ -387,25 +387,7 @@ button.strelka:disabled {
 
 }
 
-.header-4-work {
-    color: var(--Tag-Purple, #4361FF);
-    padding-bottom: 8px;
-}
 
-.header-4-health {
-    color: var(--Tag-Green, #06A44F);
-    padding-bottom: 8px;
-}
-
-.header-4-workk {
-    color: var(--Tag-Purple, #4361FF);
-    padding-bottom: 8px;
-}
-
-.header-4-harmony {
-    color: var(--Tag-Pink, #FF43F7);
-    padding-bottom: 8px;
-}
 
 .best-content-text {
     padding: 20px;
@@ -413,13 +395,25 @@ button.strelka:disabled {
     width: 100%;
     background-color: #fff;
     border-radius: 20px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    height:100%;
 }
 
 .header-3-best {
     overflow: hidden;
     color: var(--Dark, #181C29);
     text-overflow: ellipsis;
-    padding-bottom: 24.32px;
+    display: -webkit-box;             
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 2;            
+    overflow: hidden;                
+    text-overflow: ellipsis;          
+    line-height: 1.2;                 
+    height: calc(2 * 1.2em);         
+    word-wrap: break-word;
+    
 
 }
 

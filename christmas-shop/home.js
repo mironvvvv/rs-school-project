@@ -175,11 +175,12 @@ function updateTimer() {
       const card = document.createElement('div');
       card.classList.add('card');
   
-      
+      const categoryColor = item.categoryColor;
+
       card.innerHTML = `
         <img class="card-img" src="${item.imgSrc}" alt="${item.name}">
         <div class="best-content-text">
-          <h4 class="header-4">${item.category}</h4>
+          <h4 style="color: ${categoryColor};">${item.category}</h4>
           <h3 class="header-3-best">${item.name}</h3>
         </div>
       `;
@@ -189,7 +190,24 @@ function updateTimer() {
     });
   }
   
-  
+  function adjustPadding() {
+    const headings = document.querySelectorAll('.header-3-best');
+
+    headings.forEach(heading => {
+        const height = heading.offsetHeight; // Получаем текущую высоту заголовка
+
+        // Если высота больше 25px, убираем padding-bottom
+        if (height > 25) {
+            heading.style.paddingBottom = '0';
+        } else {
+            heading.style.paddingBottom = '24px';
+        }
+    });
+}
+
+// Вызовем функцию после того, как элементы будут добавлены в DOM
+populateBestGifts(items);
+adjustPadding();
   
   
   
