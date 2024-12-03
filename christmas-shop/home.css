@@ -305,8 +305,8 @@ h3 {
     display: flex;
     gap: 20px;
     align-items: center;
-  
-  
+
+
 }
 
 .slider-img {
@@ -339,10 +339,11 @@ button.strelka {
 }
 
 button.strelka:disabled {
-    opacity: 0.5; /* Уменьшаем яркость кнопки */
+    opacity: 0.5;
+    /* Уменьшаем яркость кнопки */
     cursor: not-allowed;
     pointer-events: none;
-  }
+}
 
 
 
@@ -398,28 +399,25 @@ button.strelka:disabled {
     gap: 8px;
     display: flex;
     flex-direction: column;
-    height:100%;
+    height: 100%;
 }
 
 .header-3-best {
     overflow: hidden;
     color: var(--Dark, #181C29);
     text-overflow: ellipsis;
-    display: -webkit-box;             
-    -webkit-box-orient: vertical;    
-    -webkit-line-clamp: 2;            
-    overflow: hidden;                
-    text-overflow: ellipsis;          
-    line-height: 1.2;                 
-    height: calc(2 * 1.2em);         
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    height: calc(2 * 1.2em);
     word-wrap: break-word;
-    
+
 
 }
 
-.bestt {
-    padding-bottom: 0;
-}
 
 .CTA {
     background: url(assets/img/bg-forest.png) no-repeat center;
@@ -764,7 +762,7 @@ a.caption {
     button.strelka:hover:not(:disabled) .left path {
         stroke: #FF4646;
     }
-    
+
 
     .card:hover .header-3-best {
         color: #FF4646;
