@@ -376,6 +376,37 @@ a.caption {
     color: var(--Dark, #181C29);
 }
 
+.scroll-to-top {
+    display: none;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+    border-radius: 100px;
+    border: 1px solid var(--Primary, #FF4646);
+    background: var(--Static-White, #FFF);
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.scroll-to-top svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.scroll-to-top.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
 
 @media (max-width:1439px) {
     .container {
@@ -534,7 +565,9 @@ a.caption {
     .header-active .logo-burger {
         padding: 12px 8px;
     }
-
+    .scroll-to-top {
+        display: flex;
+    }
 
 }
 
