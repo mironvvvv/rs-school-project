@@ -90,7 +90,7 @@ function displayGifts(gifts, category) {
     card.classList.add("card");
     const categoryColor = gift.categoryColor;
     card.innerHTML = `
-      <img class="card-img" src="${gift.imgSrc}" alt="${gift.name}">
+      <img class="card-img" src="../${gift.imgSrc}" alt="${gift.name}">
       <div class="best-content-text">
          <h4 style="color: ${categoryColor};">${gift.category}</h4>
         <h3 class="header-3-best">${gift.name}</h3>
@@ -138,3 +138,86 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     updateButtonVisibility();
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let giftsData = [];
+
+    
+    fetch('../gifts.json')
+        .then(response => response.json())
+        .then(data => {
+            giftsData = data;
+            renderGiftCards(giftsData);
+        });
+
+    
+    function renderGiftCards(gifts) {
+        const container = document.querySelector('.gift-cards');
+        container.innerHTML = '';
+        gifts.forEach((gift, index) => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            const categoryColor = getCategoryColor(gift.category); 
+            card.innerHTML = `
+              <img class="card-img" src="../${gift.imgSrc}" alt="${gift.name}">
+              <div class="best-content-text">
+                <h4 style="color: ${categoryColor};">${gift.category}</h4>
+                <h3 class="header-3-best">${gift.name}</h3>
+              </div>
+            `;
+
+            card.addEventListener('click', () => openModal(gift)); 
+            container.appendChild(card);
+        });
+    }
+
+    
+    function getCategoryColor(category) {
+        switch (category) {
+            case 'For Work': return '#FF4646';
+            case 'For Health': return '#46FF89';
+            case 'For Harmony': return '#4689FF';
+            default: return '#000';
+        }
+    }
+
+
+    function openModal(gift) {
+        
+        const modal = document.createElement('div');
+        modal.classList.add('modal-overlay');
+
+        
+        modal.innerHTML = `
+          <div class="modal">
+            <button class="modal-close">&times;</button>
+            <img class="modal-img" src="${gift.imgSrc}" alt="${gift.name}">
+            <div class="modal-content">
+              <h4 style="color: ${getCategoryColor(gift.category)};">${gift.category}</h4>
+              <h3>${gift.name}</h3>
+              <p>${gift.description}</p>
+              <ul class="superpowers-list">
+                ${gift.superpowers.map(power => `<li>${power}</li>`).join('')}
+              </ul>
+            </div>
+          </div>
+        `;
+        document.body.appendChild(modal);
+        document.body.style.overflow = 'hidden'; 
+
+    
+        modal.querySelector('.modal-close').addEventListener('click', closeModal);
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) closeModal();
+        });
+
+        function closeModal() {
+            modal.remove();
+            document.body.style.overflow = 'auto'; 
+        }
+    }
+});
+
+
