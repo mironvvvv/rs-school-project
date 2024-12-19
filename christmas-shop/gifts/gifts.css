@@ -565,6 +565,7 @@ a.caption {
     .header-active .logo-burger {
         padding: 12px 8px;
     }
+
     .scroll-to-top {
         display: flex;
     }
@@ -617,112 +618,162 @@ a.caption {
         color: #FF4646;
     }
 }
-*
-.modal {
-    display: none;
+
+.modal-overlay {
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 9px;
-background: var(--color-light-s, #FAFAFA);
-    width: 900px;
-    height: 500px;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .modal-content:hover {
-    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-
-  }
-  
-  .close-btn {
-    position: absolute;
-  top: -50px;
-  right: -40px;
-padding: 15px 15px;
-border-radius: 100px;
-border: 2px solid var(--color-primary, #F1CDB3);
-    cursor: pointer;
-    transition:  background-color 0.3s ease;
-  }
-  
-  .close-btn:hover {
-    background-color:var(--color-primary-light, #FDDCC4);
-  }
-
-  
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
 }
 
 
-.modal-content {
-    background: white;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+.modal {
     position: relative;
+    display: flex;
+    max-width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 20px;
+    background: var(--Content-Background, #ECF3F8);
+    animation: fadeIn 0.3s ease-out;
 }
 
 
-.modal-image-container {
-    height: 230px;
-    width: 100%;
-    overflow: hidden;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
-.modal-image-container img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-.modal-description {
-    padding: 20px;
-}
-
-.modal-description h2,
-.modal-description h4 {
-    margin: 0;
-}
-
-.modal-description ul {
-    list-style: disc inside;
-    padding-left: 20px;
-}
 
 .modal-close {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 40px;
-    height: 40px;
+    background: none;
     border: none;
-    background: transparent;
-    font-size: 24px;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-body {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--Static-White, #FFF);
+}
+
+.text-title {
+    width: 100%;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.text-superpowers {
+    display: flex;
+    padding: var(--Space-0, 0px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Space-8, 8px);
+    align-self: stretch;
+}
+
+.modal-superpowers {
+    display: flex;
+    padding: var(--Space-0, 0px);
+    flex-direction: column;
+    gap: var(--Space-0, 0px);
+    align-self: stretch;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.modal-superpowers li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.modal-superpowers .superpower-key {
+    flex: 1 0 0;
+    color: var(--Dark, #181C29);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
+}
+
+.modal-superpowers .superpower-value {
+    color: var(--Dark, #181C29);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
+}
+
+.modal-superpowers .snowflakes {
+    display: flex;
+    padding: var(--Space-0, 0px);
+    align-items: flex-start;
+    gap: var(--Space-8, 8px);
+}
+
+
+@media (max-width: 420px) {
+    .modal {
+        margin: 0 8px;
+
+        max-width: 600px;
+    }
+}
+
+.modal-description {
+    color: var(--Dark, #181C29);
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 148%;
+}
+
+.superpowers-h4 {
+    color: var(--Dark, #181C29);
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
 }
