@@ -7,4 +7,4 @@ A multi-stage project for creating an online Christmas shop with adaptive design
 - ✅ **Responsive Design** – Adaptation of pages for different screen sizes down to 380px, ensuring correct display and no horizontal scrolling.  
 - ✅ **Interactive Features** – JavaScript implementation to enhance user experience with dynamic elements.  
 
-Enjoy exploring the [Christmas spirit!](https://mironvvvv.github.io/rs-school-project/christmas-shop/gifts/gifts.html) 🎁✨
+Enjoy exploring the [Christmas spirit!](https://mironvvvv.github.io/rs-school-project/christmas-shop/home.html) 🎁✨
